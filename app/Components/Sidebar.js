@@ -47,7 +47,7 @@ const Sidebar = ({isOpenState, toggle}) => {
             duration:0.125,
           }
         }
-        className="mt-5 mb-2 ">
+        className="mt-5 mb-2 cursor-pointer ">
           <Image
             src={logoSrc}
             alt="logo"
@@ -55,21 +55,56 @@ const Sidebar = ({isOpenState, toggle}) => {
             height={20}
           ></Image>
         </motion.div>
-        <div className="my-1">
+        <motion.div 
+        whileHover={{ scale: 1.5,backgroundColor: "#202020"}}
+        transition={
+          {
+            duration:0.125,
+          }
+        }
+        className="my-1 cursor-pointer">
           <Image src={trendUp} alt="logo" width={80} height={20}></Image>
-        </div>
-        <div className="my-1">
+        </motion.div>
+        <motion.div 
+        whileHover={{ scale: 1.5,backgroundColor: "#202020"}}
+        transition={
+          {
+            duration:0.125,
+          }
+        }
+        className="my-1 cursor-pointer">
           <Image src={people} alt="logo" width={80} height={50}></Image>
-        </div>
-        <div className="my-1">
+        </motion.div>
+        <motion.div 
+        whileHover={{ scale: 1.5,backgroundColor: "#202020"}}
+        transition={
+          {
+            duration:0.125,
+          }
+        }
+        className="my-1 cursor-pointer">
           <Image src={box} alt="logo" width={80} height={50}></Image>
-        </div>
-        <div className="my-1">
+        </motion.div>
+        <motion.div 
+        whileHover={{ scale: 1.5,backgroundColor: "#202020"}}
+        transition={
+          {
+            duration:0.125,
+          }
+        }
+        className="my-1 cursor-pointer">
           <Image src={flowerIcon} alt="logo" width={80} height={50}></Image>
-        </div>
-        <div className="my-1">
+        </motion.div>
+        <motion.div 
+        whileHover={{ scale: 1.5,backgroundColor: "#202020"}}
+        transition={
+          {
+            duration:0.125,
+          }
+        }
+        className="my-1 cursor-pointer">
           <Image src={infoIcon} alt="logo" width={80} height={50}></Image>
-        </div>
+        </motion.div>
         <div className="flex flex-col items-center gap-3 bg-white dark:bg-coolors-gray justify-center rounded-full py-1 w-6/12 mx-auto">
           <div> <BiSolidSun onClick={()=>setTheme('light')} size={25}  style={{ color: resolvedTheme === 'dark' ? '#B2ABAB' : '#FFFFFF' }} className="dark:bg-transparent bg-paid-green rounded-full p-1"/></div>
           <Image src={moon} alt="moon" width={20} height={50} onClick={()=>setTheme('dark')} className="dark:bg-paid-green bg-transparent rounded-full"></Image>
@@ -78,15 +113,36 @@ const Sidebar = ({isOpenState, toggle}) => {
       </div>
 
       <div>
-        <div className="my-1">
+        <motion.div 
+        whileHover={{ scale: 1.5,backgroundColor: "#202020"}}
+        transition={
+          {
+            duration:0.125,
+          }
+        }
+        className="my-1 cursor-pointer">
           <Image src={forwardIcon} alt="logo" width={80} height={20}></Image>
-        </div>
-        <div className="my-1">
+        </motion.div>
+        <motion.div 
+        whileHover={{ scale: 1.5,backgroundColor: "#202020"}}
+        transition={
+          {
+            duration:0.125,
+          }
+        }
+        className="my-1 cursor-pointer">
           <Image src={settings} alt="logo" width={80} height={20}></Image>
-        </div>
-        <div className="my-1">
+        </motion.div>
+        <motion.div 
+        whileHover={{ scale: 1.5,backgroundColor: "#202020"}}
+        transition={
+          {
+            duration:0.125,
+          }
+        }
+        className="my-1 cursor-pointer">
           <Image src={backIcon} alt="logo" width={80} height={20}></Image>
-        </div>
+        </motion.div>
       </div>
     </motion.div>
 
@@ -104,7 +160,7 @@ const Sidebar = ({isOpenState, toggle}) => {
              duration:0.125,
            }
          }
-        className="mt-5 mb-2">
+        className="mt-5 mb-2  cursor-pointer">
           <Image
             src={logoSrc}
             alt="logo"
@@ -119,7 +175,7 @@ const Sidebar = ({isOpenState, toggle}) => {
              duration:0.125,
            }
          }
-        className="my-1">
+        className="my-1 cursor-pointer">
           <Image src={trendUp} alt="logo" width={80} height={20}></Image>
         </motion.div>
         <motion.div 
@@ -129,7 +185,7 @@ const Sidebar = ({isOpenState, toggle}) => {
              duration:0.125,
            }
          }
-        className="my-1">
+        className="my-1 cursor-pointer">
           <Image src={people} alt="logo" width={80} height={50}></Image>
         </motion.div>
         <motion.div 
@@ -139,7 +195,7 @@ const Sidebar = ({isOpenState, toggle}) => {
              duration:0.125,
            }
          }
-        className="my-1">
+        className="my-1 cursor-pointer">
           <Image src={box} alt="logo" width={80} height={50}></Image>
         </motion.div>
         <motion.div 
@@ -149,7 +205,7 @@ const Sidebar = ({isOpenState, toggle}) => {
              duration:0.125,
            }
          }
-        className="my-1">
+        className="my-1 cursor-pointer">
           <Image src={flowerIcon} alt="logo" width={80} height={50}></Image>
         </motion.div>
         <motion.div 
@@ -159,7 +215,7 @@ const Sidebar = ({isOpenState, toggle}) => {
              duration:0.125,
            }
          }
-        className="my-1">
+        className="my-1 cursor-pointer">
           <Image src={infoIcon} alt="logo" width={80} height={50}></Image>
         </motion.div>
         <div className="flex flex-col items-center gap-3 bg-white dark:bg-coolors-gray justify-center rounded-full py-1 w-6/12 mx-auto">
@@ -176,7 +232,7 @@ const Sidebar = ({isOpenState, toggle}) => {
              duration:0.125,
            }
          }
-        className="my-1">
+        className="my-1 cursor-pointer">
           <Image src={forwardIcon} alt="logo" width={80} height={20}></Image>
         </motion.div>
         <motion.div 
@@ -186,7 +242,7 @@ const Sidebar = ({isOpenState, toggle}) => {
              duration:0.125,
            }
          }
-        className="my-1">
+        className="my-1 cursor-pointer">
           <Image src={settings} alt="logo" width={80} height={20}></Image>
         </motion.div>
         <motion.div 
@@ -196,7 +252,7 @@ const Sidebar = ({isOpenState, toggle}) => {
              duration:0.125,
            }
          }
-        className="my-1">
+        className="my-1 cursor-pointer">
           <Image src={backIcon} alt="logo" width={80} height={20}></Image>
         </motion.div>
       </div>

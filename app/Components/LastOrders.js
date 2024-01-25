@@ -52,7 +52,7 @@ const LastOrders = () => {
     <section className="col-span-2 mx-3 bg-white rounded-md dark:bg-coolors-gray fold:p-1 mtablets:p-5">
       <div className="flex justify-between items-center w-11/12">
         <p className="fold:text-base mtablets:text-lg font-semibold">Last Orders</p>
-        <p className="text-paid-green fold:text-base mtablets:text-lg font-semibold">See All</p>
+        <p className="text-paid-green fold:text-base mtablets:text-lg font-semibold cursor-pointer">See All</p>
       </div>
       <div className="overflow-x-auto fold:text-xxs mobile:text-xxss mtablets:text-base">
         <div className="grid grid-cols-6 text-gray-text-3 fold:text-xxs mobile:text-xxss mtablets:text-base border-b dark:border-gray-700 py-3">
@@ -90,7 +90,7 @@ const LastOrders = () => {
             >
               {lastOrder.status}
             </p>
-            <div className="flex justify-around items-center w-6/12">
+            <div className="flex justify-around items-center w-6/12 cursor-pointer">
               <Image src={viewIcon} alt="view" width={20} height={30} className="fold:w-2/4 mtablets:w-auto"></Image>
               <p>View</p>
             </div>
