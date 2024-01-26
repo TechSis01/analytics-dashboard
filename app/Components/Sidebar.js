@@ -29,7 +29,10 @@ const Sidebar = ({ isOpenState, toggle }) => {
 
   const logoSrc = resolvedTheme === "dark" ? brightdash : dashboardIcon;
   const moonSrc = resolvedTheme === "dark" ? brightmoon : moon;
+  const backgroundColorLightMode = "#e9ecef";
+  const backgroundColorDarkMode = "#212529"; 
 
+  const backgroundColor = resolvedTheme === 'light' ? backgroundColorLightMode : backgroundColorDarkMode;
   useEffect(() => setMounted(true), []);
   return (
     // MOBILE
@@ -45,7 +48,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
               <Image src={logo} alt="logo" width={30} height={20}></Image>
             </div>
             <motion.div
-              whileHover={{ scale: 1.5, backgroundColor: "#202020" }}
+              whileHover={{ scale: 1.5, backgroundColor: backgroundColor }}
               transition={{
                 duration: 0.125,
               }}
@@ -54,7 +57,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
               <Image src={logoSrc} alt="logo" width={80} height={20}></Image>
             </motion.div>
             <motion.div
-              whileHover={{ scale: 1.5, backgroundColor: "#202020" }}
+              whileHover={{ scale: 1.5, backgroundColor: backgroundColor }}
               transition={{
                 duration: 0.125,
               }}
@@ -63,7 +66,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
               <Image src={trendUp} alt="logo" width={80} height={20}></Image>
             </motion.div>
             <motion.div
-              whileHover={{ scale: 1.5, backgroundColor: "#202020" }}
+              whileHover={{ scale: 1.5, backgroundColor: backgroundColor }}
               transition={{
                 duration: 0.125,
               }}
@@ -72,7 +75,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
               <Image src={people} alt="logo" width={80} height={50}></Image>
             </motion.div>
             <motion.div
-              whileHover={{ scale: 1.5, backgroundColor: "#202020" }}
+              whileHover={{ scale: 1.5, backgroundColor: backgroundColor }}
               transition={{
                 duration: 0.125,
               }}
@@ -81,7 +84,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
               <Image src={box} alt="logo" width={80} height={50}></Image>
             </motion.div>
             <motion.div
-              whileHover={{ scale: 1.5, backgroundColor: "#202020" }}
+              whileHover={{ scale: 1.5, backgroundColor: backgroundColor}}
               transition={{
                 duration: 0.125,
               }}
@@ -90,7 +93,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
               <Image src={flowerIcon} alt="logo" width={80} height={50}></Image>
             </motion.div>
             <motion.div
-              whileHover={{ scale: 1.5, backgroundColor: "#202020" }}
+              whileHover={{ scale: 1.5, backgroundColor: backgroundColor }}
               transition={{
                 duration: 0.125,
               }}
@@ -123,7 +126,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
 
           <div>
             <motion.div
-              whileHover={{ scale: 1.5, backgroundColor: "#202020" }}
+              whileHover={{ scale: 1.5, backgroundColor: backgroundColor }}
               transition={{
                 duration: 0.125,
               }}
@@ -137,7 +140,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
               ></Image>
             </motion.div>
             <motion.div
-              whileHover={{ scale: 1.5, backgroundColor: "#202020" }}
+              whileHover={{ scale: 1.5, backgroundColor: backgroundColor }}
               transition={{
                 duration: 0.125,
               }}
@@ -146,7 +149,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
               <Image src={settings} alt="logo" width={80} height={20}></Image>
             </motion.div>
             <motion.div
-              whileHover={{ scale: 1.5, backgroundColor: "#202020" }}
+              whileHover={{ scale: 1.5, backgroundColor: backgroundColor }}
               transition={{
                 duration: 0.125,
               }}
@@ -165,7 +168,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
             <Image src={logo} alt="logo" width={30} height={20}></Image>
           </div>
           <motion.div
-            whileHover={{ scale: 0.9, backgroundColor: "#e9ecef" }}
+            whileHover={{ scale: 0.9, backgroundColor: backgroundColor }}
             transition={{
               duration: 0.125,
             }}
@@ -174,7 +177,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
             <Image src={logoSrc} alt="logo" width={80} height={20}></Image>
           </motion.div>
           <motion.div
-            whileHover={{ scale: 0.9, backgroundColor: "#e9ecef" }}
+            whileHover={{ scale: 0.9, backgroundColor: backgroundColor }}
             transition={{
               duration: 0.125,
             }}
@@ -183,7 +186,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
             <Image src={trendUp} alt="logo" width={80} height={20}></Image>
           </motion.div>
           <motion.div
-            whileHover={{ scale: 0.9, backgroundColor: "#e9ecef" }}
+            whileHover={{ scale: 0.9, backgroundColor: backgroundColor }}
             transition={{
               duration: 0.125,
             }}
@@ -192,7 +195,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
             <Image src={people} alt="logo" width={80} height={50}></Image>
           </motion.div>
           <motion.div
-            whileHover={{ scale: 0.9, backgroundColor: "#e9ecef" }}
+            whileHover={{ scale: 0.9, backgroundColor: backgroundColor }}
             transition={{
               duration: 0.125,
             }}
@@ -201,7 +204,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
             <Image src={box} alt="logo" width={80} height={50}></Image>
           </motion.div>
           <motion.div
-            whileHover={{ scale: 0.9, backgroundColor: "#e9ecef" }}
+            whileHover={{ scale: 0.9, backgroundColor: backgroundColor }}
             transition={{
               duration: 0.125,
             }}
@@ -210,7 +213,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
             <Image src={flowerIcon} alt="logo" width={80} height={50}></Image>
           </motion.div>
           <motion.div
-            whileHover={{ scale: 0.9, backgroundColor: "#e9ecef" }}
+            whileHover={{ scale: 0.9, backgroundColor: backgroundColor }}
             transition={{
               duration: 0.125,
             }}
@@ -243,7 +246,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
 
         <div>
           <motion.div
-            whileHover={{ scale: 0.9, backgroundColor: "#e9ecef" }}
+            whileHover={{ scale: 0.9, backgroundColor: backgroundColor }}
             transition={{
               duration: 0.125,
             }}
@@ -252,7 +255,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
             <Image src={forwardIcon} alt="logo" width={80} height={20}></Image>
           </motion.div>
           <motion.div
-            whileHover={{ scale: 0.9, backgroundColor: "#e9ecef" }}
+            whileHover={{ scale: 0.9, backgroundColor: backgroundColor }}
             transition={{
               duration: 0.125,
             }}
@@ -261,7 +264,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
             <Image src={settings} alt="logo" width={80} height={20}></Image>
           </motion.div>
           <motion.div
-            whileHover={{ scale: 0.9, backgroundColor: "#e9ecef" }}
+            whileHover={{ scale: 0.9, backgroundColor: backgroundColor }}
             transition={{
               duration: 0.125,
             }}
