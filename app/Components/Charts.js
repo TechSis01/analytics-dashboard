@@ -153,6 +153,23 @@ const variants = {
 const Charts = ({ openStateTimeline, timeLineOpen }) => {
   const [timeLine, setTimeLine] = useState("Weekly");
 
+
+  const changeDaily = ()=>{
+    setTimeLine('Daily')
+    timeLineOpen()
+  }
+  const changeWeekly = ()=>{
+    setTimeLine('Weekly')
+    timeLineOpen()
+  }
+  const changeMonthly = ()=>{
+    setTimeLine('Monthly')
+    timeLineOpen()
+  }
+  const changeYear = ()=>{
+    setTimeLine('Yearly')
+    timeLineOpen()
+  }
   return (
     <div className="bg-white dark:bg-coolors-gray p-5 m-3 rounded-md col-span-2  text-xs ">
       <div className="flex justify-between">
@@ -189,7 +206,7 @@ const Charts = ({ openStateTimeline, timeLineOpen }) => {
             className=" p-1 mb-2 cursor-pointer rounded-sm"
             whileHover={{ backgroundColor:'#898989'}}
             whileTap={{backgroundColor:'#787486'}}
-            onClick={()=>setTimeLine('Daily')}
+            onClick={changeDaily}
           >
             Daily
           </motion.p>
@@ -197,7 +214,7 @@ const Charts = ({ openStateTimeline, timeLineOpen }) => {
             className="p-1 mb-2 cursor-pointer rounded-sm"
             whileHover={{ backgroundColor:'#898989' }}
             whileTap={{backgroundColor:'#787486'}}
-            onClick={()=>setTimeLine('Weekly')}
+            onClick={changeWeekly}
           >
             Weekly
           </motion.p>
@@ -205,7 +222,7 @@ const Charts = ({ openStateTimeline, timeLineOpen }) => {
             className="p-1 mb-2 cursor-pointer rounded-sm"
             whileHover={{ backgroundColor:'#898989' }}
             whileTap={{backgroundColor:'#787486'}}
-            onClick={()=>setTimeLine('Montly')}
+            onClick={changeMonthly}
           >
             Monthly
           </motion.p>
@@ -213,7 +230,7 @@ const Charts = ({ openStateTimeline, timeLineOpen }) => {
             className=" p-1 mb-2 cursor-pointer rounded-sm"
             whileHover={{ backgroundColor:'#898989' }}
             whileTap={{backgroundColor:'#787486'}}
-            onClick={()=>setTimeLine('Yearly')}
+            onClick={changeYear}
           >
             Yearly
           </motion.p>
