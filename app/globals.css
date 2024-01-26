@@ -23,3 +23,11 @@
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #555; /* Color of the scrollbar thumb on hover */
 }
+
+.hover-color-dark:hover {
+  background-color: #0f0f0f; /* color1 */
+}
+
+.hover-color-light:hover {
+  background-color: #F7F8FA; /* color2 */
+}

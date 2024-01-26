@@ -162,7 +162,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
       </div>
 
       {/* DESKTOP */}
-      <div className="fixed hidden mtablets:flex top-0 left-0 flex-col items-center justify-between w-16  bg-gray-scale dark:bg-black pt-5 border-r border-gray-300 dark:border-gray-700 h-screen">
+      <div className="fixed hidden mtablets:flex top-0 left-0 flex-col items-center justify-between w-16  bg-gray-scale dark:bg-black pt-5 h-5/6 ">
         <div>
           <div className="flex justify-center items-center my-1">
             <Image src={logo} alt="logo" width={30} height={20}></Image>
@@ -244,7 +244,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
           </div>
         </div>
 
-        <div>
+        <div className="mt-20">
           <motion.div
             whileHover={{ scale: 0.9, backgroundColor: backgroundColor }}
             transition={{
@@ -272,6 +272,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
           >
             <Image src={backIcon} alt="logo" width={80} height={20}></Image>
           </motion.div>
+          <div className="bg-white h-20 w-full dark:bg-coolors-gray"></div>
         </div>
       </div>
     </>

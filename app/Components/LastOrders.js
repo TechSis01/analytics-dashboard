@@ -56,8 +56,8 @@ const LastOrders = ({toggleModal,changeModalStateClose}) => {
     toggleModal(id)
     changeModalStateClose()
   }
-
   const logoSrc = resolvedTheme === "dark" ? viewIconBright : viewIcon;
+  
   return (
     <section className="col-span-2 mx-3 bg-white rounded-md dark:bg-coolors-gray fold:p-1 mobile:p-2 mtablets:p-5 ">
       <div className="flex justify-between items-center w-11/12">
@@ -77,7 +77,7 @@ const LastOrders = ({toggleModal,changeModalStateClose}) => {
           
           <div
             key={lastOrder.id}
-            className="grid grid-cols-6 my-3 py-2 items-center border-b dark:border-gray-700"
+            className={`grid grid-cols-6 py-3 items-center border-b dark:border-gray-700 ${resolvedTheme === 'dark' ? 'hover-color-dark' : 'hover-color-light'}`}
           >
             <div className="flex items-center gap-3 col-span-2">
               <Image
