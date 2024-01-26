@@ -1,3 +1,22 @@
+# Analytics Dashboard
+
+## Project Overview
+This is a Frontend challenge organized by [Geegpay](https://www.geegpay.africa/) in collaboration with Tech enthusiast David Herbert, the goal was to replicate an analytics dashboard design making sure to pay attention to details and build a dashboard that is responsive across different screen sizes.
+
+### Technologies Used
+**Next.js**: A React framework for server-side rendering and building static web applications.
+**Tailwind CSS**: A utility-first CSS framework for rapidly building custom designs.
+**React Chart.js**: A React wrapper for Chart.js, used for creating dynamic and responsive charts.
+
+### Lessons Learned
+** I have this subtle fear of creating dashboards just because it always feels like making them responsive would be a hassle. However, the main goal for this challenge was to make sure the dashboard was as responsive as possible. I tried my best to make sure the dashboard was responsive on all possible screen sizes down to the smallest smartphones. This has further made me more confident about building dashboards and I won't be afraid to attempt building more in the future especially when the opportunity comes along. 
+** I also learned how to switch between the light and dark mode with Tailwind CSS, before this project I had never implemented the light and dark mode feature in any of my projects.
+
+
+### Challenges faced
+This is the second of many dashboards that I will be building as long as my career in tech goes. Creating the chart exactly how it was on the design was a bit of a challenge. I dabbled around with about three react chart libraries, but none of them was giving me what I wanted, at some point, I thought about creating a custom bar chart, but I thought that would be limiting for me because I wanted it to be as interactive as possible and not static. Finally, I settled on using the React Chart js Library and I was eventually able to use it to create what I wanted based on the design. 
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
