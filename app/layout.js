@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={`${jakarta.className} dark:bg-black bg-gray-scale`}>
         <Providers>{children}</Providers>
