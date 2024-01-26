@@ -84,7 +84,7 @@ const Modal = ({dataId,changeModalState,currentModalState}) => {
   return (
     <section 
     onClick={changeModalState} 
-    className={`fixed top-0 w-screen h-screen bg-black bg-opacity-30 `}>
+    className={`fixed top-0 w-screen h-screen bg-black bg-opacity-50 `}>
         <div 
         className={`bg-white text-black fold:w-8/12 mmtablets:w-2/5 mx-auto fold:mt-56 mmtablets:mt-36 p-10 rounded-md shadow-xl text-center `}>
             <Image src={currentState.image} alt={currentState.name} width={40} height={30} className='mx-auto'></Image>
