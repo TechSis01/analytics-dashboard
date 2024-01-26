@@ -26,7 +26,7 @@ const Header = () => {
         ></input>
       </div>
 
-      <div className="flex items-center gap-3">
+      <div className="flex items-center fold:gap-0 p-0 mtablets:gap-3">
         <Image src={calendar} alt="calender" width={20} height={20}></Image>
         <p className="text-xs">November 15, 2023</p>
       </div>

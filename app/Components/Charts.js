@@ -23,12 +23,23 @@ export const optionsDesktop = {
   maintainAspectRatio: true,
   aspectRatio: 3,
   responsive: true,
-  tooltips: {
-    callbacks: {
-      label: (tooltipItem) => `$${tooltipItem.yLabel}`,
+  plugins: {
+    tooltip: {
+      callbacks: {
+        label: (context) => `$${context.parsed.y}`,
+      },
     },
   },
   scales: {
+    y: {
+      beginAtZero: true,
+      ticks: {
+        stepSize: 10000,
+        callback: function(value) {
+          return value.toLocaleString();
+        }
+      }
+    },
     x: {
       grid: {
         display: false, // Disable grid lines for x-axis
@@ -36,16 +47,25 @@ export const optionsDesktop = {
     },
   },
 };
+ 
 export const optionsMobile = {
-  maintainAspectRatio: true,
+  // maintainAspectRatio: true,
   aspectRatio: 1,
-  responsive: true,
   tooltips: {
     callbacks: {
       label: (tooltipItem) => `$${nums[tooltipItem.index]}`,
     },
   },
   scales: {
+    y: {
+      beginAtZero: true,
+      ticks: {
+        stepSize: 10000,
+        callback: function(value) {
+          return value.toLocaleString();
+        }
+      }
+    },
     x: {
       ticks: {
         maxRotation: 95,
@@ -67,6 +87,15 @@ export const optionsTablet = {
     },
   },
   scales: {
+    y: {
+      beginAtZero: true,
+      ticks: {
+        stepSize: 10000,
+        callback: function(value) {
+          return value.toLocaleString();
+        }
+      }
+    },
     x: {
       grid: {
         display: false,
