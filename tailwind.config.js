@@ -12,6 +12,7 @@ module.exports = {
       'fold':'280px',
       'mobile':'320px',
       'mtablets':'640px',
+      'mmtablets':'1024px',
       'tablets':'1028px',
       'laptops':'1440px'
     },

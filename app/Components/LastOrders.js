@@ -5,6 +5,8 @@ import cooper from "../../public/cooper.png";
 import philip from "../../public/philip.png";
 import Image from "next/image";
 import viewIcon from "../../public/viewIcon.png";
+import { motion } from "framer-motion";
+import Modal from './Modal'
 const lastOrders = [
   {
     name: "Marcus Bergson",
@@ -47,7 +49,12 @@ const lastOrders = [
     id: 5,
   },
 ];
-const LastOrders = () => {
+const LastOrders = ({toggleModal,changeModalStateClose}) => {
+
+  const modalFunc = (id)=>{
+    toggleModal(id)
+    changeModalStateClose()
+  }
   return (
     <section className="col-span-2 mx-3 bg-white rounded-md dark:bg-coolors-gray fold:p-1 mtablets:p-5">
       <div className="flex justify-between items-center w-11/12">
@@ -64,6 +71,7 @@ const LastOrders = () => {
           <div>Invoice</div>
         </div>
         {lastOrders.map((lastOrder) => (
+          
           <div
             key={lastOrder.id}
             className="grid grid-cols-6 my-3 py-2 items-center border-b dark:border-gray-700"
@@ -90,11 +98,18 @@ const LastOrders = () => {
             >
               {lastOrder.status}
             </p>
-            <div className="flex justify-around items-center w-6/12 cursor-pointer">
+            <motion.div 
+            whileHover={{ scale: 1.2}}
+            transition={{
+              duration: 0.125,
+            }}
+            onClick={()=>modalFunc(lastOrder.id)}
+            className="flex justify-around items-center w-6/12 cursor-pointer">
               <Image src={viewIcon} alt="view" width={20} height={30} className="fold:w-2/4 mtablets:w-auto"></Image>
               <p>View</p>
-            </div>
+            </motion.div>
           </div>
+          
         ))}
       </div>
     </section>

@@ -12,8 +12,8 @@ const Header = () => {
 
   const logoSrc = resolvedTheme === "dark" ? solarbell : bell;
   return (
-    <div className=" bg-gray-scale dark:bg-black grid-cols-1 grid mtablets:grid-cols-5 items-center pb-2 pt-6 border-b border-gray-300 dark:border-gray-700 pl-2 pr-2 lg:pl-5 gap-5">
-      <div className="col-span-1 mtablets:col-span-2">
+    <div className=" bg-gray-scale dark:bg-black grid-cols-1 grid mtablets:grid-cols-4 mmtablets:grid-cols-5 items-center pb-2 pt-6 border-b border-gray-300 dark:border-gray-700 pl-2 pr-2 lg:pl-5 gap-5">
+      <div className="col-span-1 mmtablets:col-span-2">
         <h2 className="text-lg lg:text-xl font-semibold">Dashboard</h2>
       </div>
 
@@ -33,7 +33,7 @@ const Header = () => {
 
       <div className="md:flex flex-row-reverse md:flex-row items-center gap-1 lg:gap-5">
         <div className="hidden lg:block border border-gray-200 dark:border-gray-700 rounded-full p-1">
-        <motion.div whileTap={{ scale: 0.85 }}>
+        <motion.div whileTap={{ scale: 0.85 }} className="cursor-pointer">
               <Image src={logoSrc} alt="bell" width={20} height={20}></Image>
             </motion.div>
         </div>
@@ -51,8 +51,8 @@ const Header = () => {
           </div>
           <MdKeyboardArrowDown />
           <div className="md:hidden border border-gray-200 dark:border-gray-700 rounded-full p-1">
-            <motion.div whileTap={{ scale: 0.85 }}>
-              <Image src={logoSrc} alt="bell" width={20} height={20}></Image>
+            <motion.div whileTap={{ scale: 0.85 }} className="cursor-pointer">
+              <Image src={logoSrc} alt="bell"  width={20} height={20} ></Image>
             </motion.div>
           </div>
         </div>

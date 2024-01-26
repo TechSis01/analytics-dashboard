@@ -5,7 +5,7 @@ import bared from '../../public/bared.png'
 import Image from 'next/image'
 const TopPlatform = () => {
   return (
-    <section className='flex flex-col justify-around mt-3 tablets:mt-0 mx-3 bg-white  dark:bg-coolors-gray rounded-md fold:p-1 mtablets:p-5 '>
+    <section className='flex flex-col justify-around mt-3 tablets:mt-0 fold:mx-3 mmtablets:mx-5 bg-white  dark:bg-coolors-gray rounded-md fold:p-2 mtablets:p-5 '>
          <div >
             <p className='fold:text-sm mobile:text-base mtablets:text-lg font-semibold py-2'>Top Platform</p>
         </div>
