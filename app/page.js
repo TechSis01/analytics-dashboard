@@ -29,7 +29,7 @@ export default function Home() {
     <main className="text-sm flex ">
       <Sidebar isOpenState={isOpen} toggle={toggleSideBar}/>
       <Dashboard isOpenState={isOpen} toggle={toggleSideBar} openStateTimeline = {isOpenTimeline} timeLineOpen={toggleTimeLine} toggleModal = {openModal} changeModalStateClose={changeModalStateClose}/>
-      {modalState && <Modal dataId = {modalOpen} changeModalState ={changeModalState}/>}
+      {modalState && <Modal dataId = {modalOpen} changeModalState ={changeModalState} currentModalState = {modalState}/>}
     </main>
   );
 }
