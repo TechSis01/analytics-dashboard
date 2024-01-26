@@ -50,7 +50,7 @@ export const optionsDesktop = {
  
 export const optionsMobile = {
   // maintainAspectRatio: true,
-  aspectRatio: 1,
+  aspectRatio: 0,
   tooltips: {
     callbacks: {
       label: (tooltipItem) => `$${nums[tooltipItem.index]}`,

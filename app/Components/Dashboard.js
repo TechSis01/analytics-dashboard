@@ -17,16 +17,17 @@ const Dashboard = ({
 }) => {
   return (
     <div className={`w-full ml-0 mtablets:ml-16`}>
-      <div className="flex justify-between px-2 py-2 items-center">
+      <div className={`mmtablets:hidden fixed w-full dark:bg-coolors-gray bg-white flex justify-between px-2 py-2 items-center`}>
         <PiDotsThreeOutlineVerticalFill
           size={20}
-          className=" mtablets:hidden ml-2 mt-2 border rounded-full p-1"
+          className=" mtablets:hidden ml-2 mt-2 border border-gray-600 dark:border-white rounded-full p-1 "
           onClick={toggle}
         />
         <div className="flex justify-center items-center my-1 mtablets:hidden">
           <Image src={logo} alt="logo" width={30} height={20}></Image>
         </div>
       </div>
+      <div className="fold:mt-14 mtablets:mt-0 py-3">
       <Header />
       <div className="tablets:max-h-56 grid grid-cols-1 mmtablets:grid-cols-1 tablets:grid-cols-3 ">
         <Chart
@@ -47,6 +48,7 @@ const Dashboard = ({
           changeModalStateClose={changeModalStateClose}
         />
         <TopPlatform />
+      </div>
       </div>
     </div>
   );

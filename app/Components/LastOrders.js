@@ -6,7 +6,8 @@ import philip from "../../public/philip.png";
 import Image from "next/image";
 import viewIcon from "../../public/viewIcon.png";
 import { motion } from "framer-motion";
-import Modal from './Modal'
+import viewIconBright from '../../public/viewIconBright.png'
+import { useTheme } from "next-themes";
 const lastOrders = [
   {
     name: "Marcus Bergson",
@@ -50,11 +51,13 @@ const lastOrders = [
   },
 ];
 const LastOrders = ({toggleModal,changeModalStateClose}) => {
-
+  const { resolvedTheme } = useTheme();
   const modalFunc = (id)=>{
     toggleModal(id)
     changeModalStateClose()
   }
+
+  const logoSrc = resolvedTheme === "dark" ? viewIconBright : viewIcon;
   return (
     <section className="col-span-2 mx-3 bg-white rounded-md dark:bg-coolors-gray fold:p-1 mobile:p-2 mtablets:p-5">
       <div className="flex justify-between items-center w-11/12">
@@ -104,8 +107,8 @@ const LastOrders = ({toggleModal,changeModalStateClose}) => {
               duration: 0.125,
             }}
             onClick={()=>modalFunc(lastOrder.id)}
-            className="flex justify-around items-center w-6/12 cursor-pointer">
-              <Image src={viewIcon} alt="view" width={20} height={30} className="fold:w-2/4 mtablets:w-auto"></Image>
+            className="flex justify-around items-center w-6/12 cursor-pointer gap-1">
+              <Image src={logoSrc} alt="view" width={20} height={30} className="fold:w-2/4 mtablets:w-auto"></Image>
               <p>View</p>
             </motion.div>
           </div>

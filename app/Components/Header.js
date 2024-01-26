@@ -12,7 +12,7 @@ const Header = () => {
 
   const logoSrc = resolvedTheme === "dark" ? solarbell : bell;
   return (
-    <div className=" bg-gray-scale dark:bg-black grid-cols-1 grid mtablets:grid-cols-4 mmtablets:grid-cols-5 items-center pb-2 pt-6 border-b border-gray-300 dark:border-gray-700 pl-2 pr-2 lg:pl-5 gap-5">
+    <div className=" bg-gray-scale dark:bg-black grid-cols-1 grid mtablets:grid-cols-4 mmtablets:grid-cols-5 items-center pb-2  border-b border-gray-300 dark:border-gray-700 pl-2 pr-2 lg:pl-5 gap-5">
       <div className="col-span-1 mmtablets:col-span-2">
         <h2 className="text-lg lg:text-xl font-semibold">Dashboard</h2>
       </div>
@@ -26,7 +26,7 @@ const Header = () => {
         ></input>
       </div>
 
-      <div className="flex items-center fold:gap-0 p-0 mtablets:gap-3">
+      <div className="flex items-center fold:gap-1 p-0 mtablets:gap-3">
         <Image src={calendar} alt="calender" width={20} height={20}></Image>
         <p className="text-xs">November 15, 2023</p>
       </div>

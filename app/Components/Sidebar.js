@@ -17,7 +17,7 @@ import moon from "../../public/moon.png";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import brightdash from "../../public/brightdash.png";
-
+import brightmoon from '../../public/brightmoon.png'
 const variants = {
   open: { opacity: 1, x: "-7%" },
   closed: { opacity: 0, x: "-100%" },
@@ -28,6 +28,8 @@ const Sidebar = ({ isOpenState, toggle }) => {
   const { setTheme, resolvedTheme } = useTheme();
 
   const logoSrc = resolvedTheme === "dark" ? brightdash : dashboardIcon;
+  const moonSrc = resolvedTheme === "dark" ? brightmoon : moon;
+
   useEffect(() => setMounted(true), []);
   return (
     // MOBILE
@@ -109,7 +111,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
                 />
               </div>
               <Image
-                src={moon}
+                src={moonSrc}
                 alt="moon"
                 width={20}
                 height={50}
@@ -229,12 +231,12 @@ const Sidebar = ({ isOpenState, toggle }) => {
               />
             </div>
             <Image
-              src={moon}
+              src={moonSrc}
               alt="moon"
               width={20}
               height={50}
               onClick={() => setTheme("dark")}
-              className="dark:bg-paid-green bg-transparent rounded-full"
+              className="dark:bg-paid-green bg-transparent p-[0.5] rounded-full"
             ></Image>
           </div>
         </div>
