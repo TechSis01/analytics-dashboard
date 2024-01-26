@@ -16,7 +16,7 @@ const Dashboard = ({
   changeModalStateClose,
 }) => {
   return (
-    <div className={`w-full ml-0 mtablets:ml-16`}>
+    <div className={`w-full ml-0 mtablets:ml-16 `}>
       <div className={`mmtablets:hidden fixed w-full dark:bg-coolors-gray bg-white flex justify-between px-2 py-2 items-center`}>
         <PiDotsThreeOutlineVerticalFill
           size={20}

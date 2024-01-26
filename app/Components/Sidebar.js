@@ -37,7 +37,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
   return (
     // MOBILE
     <>
-      <div className={`fixed bg-black bg-opacity-30 ${isOpenState ? 'w-screen h-screen' : 'w-0 h-0'} backdrop-blur-sm`}  onClick={toggle}>
+      <div className={`fixed bg-black bg-opacity-30 ${isOpenState ? 'w-screen h-screen backdrop-blur-sm' : 'w-0 h-0'} `}  onClick={toggle}>
         <motion.div
           animate={isOpenState ? "open" : "closed"}
           variants={variants}
@@ -172,7 +172,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
             transition={{
               duration: 0.125,
             }}
-            className="mt-5 mb-2  cursor-pointer"
+            className="mt-3 mb-2  cursor-pointer"
           >
             <Image src={logoSrc} alt="logo" width={80} height={20}></Image>
           </motion.div>

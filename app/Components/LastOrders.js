@@ -59,7 +59,7 @@ const LastOrders = ({toggleModal,changeModalStateClose}) => {
 
   const logoSrc = resolvedTheme === "dark" ? viewIconBright : viewIcon;
   return (
-    <section className="col-span-2 mx-3 bg-white rounded-md dark:bg-coolors-gray fold:p-1 mobile:p-2 mtablets:p-5">
+    <section className="col-span-2 mx-3 bg-white rounded-md dark:bg-coolors-gray fold:p-1 mobile:p-2 mtablets:p-5 ">
       <div className="flex justify-between items-center w-11/12">
         <p className="fold:text-xs mobile:text-base mtablets:text-lg font-semibold">Last Orders</p>
         <p className="text-paid-green fold:text-xs mobile:text-base mtablets:text-lg font-semibold cursor-pointer">See All</p>

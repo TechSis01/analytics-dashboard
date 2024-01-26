@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
         ></link>
         <link rel="manifest" href="/site.webmanifest"></link>
       </head>
-      <body className={`${jakarta.className} dark:bg-black bg-gray-scale`}>
+      <body className={`${jakarta.className} dark:bg-black bg-gray-scale `}>
         <Providers>{children}</Providers>
       </body>
     </html>

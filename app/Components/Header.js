@@ -1,5 +1,6 @@
 import { CiSearch } from "react-icons/ci";
 import calendar from "../../public/calendar.png";
+import calendarbright from '../../public/calendarbright.png'
 import bell from "../../public/bellicon.png";
 import profilepix from "../../public/Profile.png";
 import solarbell from "../../public/solar-bell.png";
@@ -11,6 +12,7 @@ const Header = () => {
   const { resolvedTheme } = useTheme();
 
   const logoSrc = resolvedTheme === "dark" ? solarbell : bell;
+  const calSrc = resolvedTheme === "dark" ? calendarbright : calendar;
   return (
     <div className=" bg-gray-scale dark:bg-black grid-cols-1 grid mtablets:grid-cols-4 mmtablets:grid-cols-5 items-center pb-2  border-b border-gray-300 dark:border-gray-700 pl-2 pr-2 lg:pl-5 gap-5">
       <div className="col-span-1 mmtablets:col-span-2">
@@ -26,8 +28,8 @@ const Header = () => {
         ></input>
       </div>
 
-      <div className="flex items-center fold:gap-1 p-0 mtablets:gap-3">
-        <Image src={calendar} alt="calender" width={20} height={20}></Image>
+      <div className="flex items-center fold:gap-1 p-2 mtablets:gap-3">
+        <Image src={calSrc} alt="calender" width={20} height={20}></Image>
         <p className="text-xs">November 15, 2023</p>
       </div>
 
@@ -56,6 +58,7 @@ const Header = () => {
             </motion.div>
           </div>
         </div>
+
       </div>
     </div>
   );
