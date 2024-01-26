@@ -10,7 +10,7 @@ const Dashboard = ({isOpenState, toggle, openStateTimeline,timeLineOpen,toggleMo
     <div className={`w-full ${isOpenState ? 'fold:ml-10 mobile:ml-14 mtablets:ml-16' : 'ml-0'} mtablets:ml-16`}>
       <PiDotsThreeOutlineVerticalFill size={20} className=" mtablets:hidden ml-2 mt-2" onClick={toggle}/>
       <Header />
-      <div className="tablets:max-h-56 grid grid-cols-1 mmtablets:grid-cols-3 tablets:grid-cols-3 ">
+      <div className="tablets:max-h-56 grid grid-cols-1 mmtablets:grid-cols-1 tablets:grid-cols-3 ">
         <Chart openStateTimeline={openStateTimeline} timeLineOpen ={timeLineOpen }/>
         <Orders />
       </div>
