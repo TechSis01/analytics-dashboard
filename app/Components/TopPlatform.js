@@ -67,8 +67,8 @@ const TopPlatform = () => {
           <h2 className="fold:text-xs mobile:text-base mtablets:text-lg font-semibold">
             XStore
           </h2>
-          <div className="w-full h-3 bg-gray-scale rounded-md">
-            <div className="bg-red-600 rounded-md w-3/12 h-4"></div>
+          <div className="w-full h-2 bg-gray-scale rounded-md">
+            <div className="bg-red-600 rounded-md w-3/12 h-3"></div>
           </div>
           <div className="flex justify-between items-center">
             <p className="mt-2 fold:text-xs mobile:text-base mtablets:text-lg">
@@ -81,8 +81,8 @@ const TopPlatform = () => {
           <h2 className="fold:text-xs mobile:text-base mtablets:text-lg font-semibold">
             Drone
           </h2>
-          <div className="w-full h-3 bg-gray-scale rounded-md">
-            <div className="bg-indigo-900 rounded-md w-1/5 h-4"></div>
+          <div className="w-full h-2 bg-gray-scale rounded-md">
+            <div className="bg-indigo-900 rounded-md w-1/5 h-3"></div>
           </div>
           <div className="flex justify-between items-center">
             <p className="mt-2 fold:text-xs mobile:text-base mtablets:text-lg">
@@ -95,8 +95,8 @@ const TopPlatform = () => {
           <h2 className="fold:text-xs mobile:text-base mtablets:text-lg font-semibold">
             Mine Craft
           </h2>
-          <div className="w-full h-3 bg-gray-scale rounded-md">
-            <div className="bg-purple-500 rounded-md w-1/6 h-4"></div>
+          <div className="w-full h-2 bg-gray-scale rounded-md">
+            <div className="bg-purple-500 rounded-md w-1/6 h-3"></div>
           </div>
           <div className="flex justify-between items-center">
             <p className="mt-2 fold:text-xs mobile:text-base mtablets:text-lg">
@@ -109,8 +109,8 @@ const TopPlatform = () => {
           <h2 className="fold:text-xs mobile:text-base mtablets:text-lg font-semibold">
             City Hunter
           </h2>
-          <div className="w-full h-3 bg-gray-scale rounded-md">
-            <div className="bg-green-500 rounded-md w-1/12 h-4"></div>
+          <div className="w-full h-2 bg-gray-scale rounded-md">
+            <div className="bg-green-500 rounded-md w-1/12 h-3"></div>
           </div>
           <div className="flex justify-between items-center ">
             <p className="mt-2 fold:text-xs mobile:text-base mtablets:text-lg">
