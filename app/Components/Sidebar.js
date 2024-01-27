@@ -32,8 +32,13 @@ const Sidebar = ({ isOpenState, toggle }) => {
   const backgroundColorLightMode = "#e9ecef";
   const backgroundColorDarkMode = "#212529"; 
 
-  const backgroundColor = resolvedTheme === 'light' ? backgroundColorLightMode : backgroundColorDarkMode;
   useEffect(() => setMounted(true), []);
+
+  const currentTheme = mounted ? resolvedTheme : 'light';
+
+  const backgroundColor = currentTheme === 'light' ? backgroundColorLightMode : backgroundColorDarkMode;
+ 
+   // or 'dark' based on your default preference
   return (
     // MOBILE
     <>
@@ -108,7 +113,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
                   onClick={() => setTheme("light")}
                   size={25}
                   style={{
-                    color: resolvedTheme === "dark" ? "#B2ABAB" : "#FFFFFF",
+                    color: currentTheme === "dark" ? "#B2ABAB" : "#FFFFFF",
                   }}
                   className="dark:bg-transparent bg-paid-green rounded-full p-1"
                 />
