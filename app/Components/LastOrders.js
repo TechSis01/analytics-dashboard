@@ -8,6 +8,7 @@ import viewIcon from "../../public/viewIcon.png";
 import { motion } from "framer-motion";
 import viewIconBright from '../../public/viewIconBright.png'
 import { useTheme } from "next-themes";
+import { useState } from "react";
 const lastOrders = [
   {
     name: "Marcus Bergson",
@@ -49,8 +50,52 @@ const lastOrders = [
     image: philip,
     id: 5,
   },
+  {
+    name: "David Herbet",
+    date: "Nov 18,2023",
+    amount: "$50,000",
+    status: "Paid",
+    image: marcus,
+    id: 6,
+  },
+  {
+    name: "Queendoline Akpan",
+    date: "Nov 12, 2023",
+    amount: "$110,000",
+    status: "Refund",
+    image: jaydon,
+    id: 7,
+  },
+  {
+    name: "Chioma Audrey",
+    date: "Nov 16,2023",
+    amount: "$66,000",
+    status: "Paid",
+    image: corey,
+    id: 8,
+  },
+  {
+    name: "Franklin Lawrence",
+    date: "Nov 11,2023",
+    amount: "$109,000",
+    status: "Refund",
+    image: cooper,
+    id: 9,
+  },
+  {
+    name: "Sandra Lubin",
+    date: "Nov 19,2023",
+    amount: "$99,000",
+    status: "Paid",
+    image: philip,
+    id: 10,
+  },
 ];
 const LastOrders = ({toggleModal,changeModalStateClose}) => {
+  const [content,setContent] = useState(false)
+  const seeAllContent = ()=>{
+      setContent((prev)=>!prev)
+  }
   const { resolvedTheme } = useTheme();
   const modalFunc = (id)=>{
     toggleModal(id)
@@ -60,11 +105,11 @@ const LastOrders = ({toggleModal,changeModalStateClose}) => {
   
   return (
     <section className="col-span-2 mx-3 bg-white rounded-md dark:bg-coolors-gray fold:p-1 mobile:p-2 mtablets:p-5 ">
-      <div className="flex justify-between items-center w-11/12">
+      <div className="flex justify-between items-center w-11/12 mmtablets:py-5">
         <p className="fold:text-xs mobile:text-base mtablets:text-lg font-semibold">Last Orders</p>
-        <p className="text-paid-green fold:text-xs mobile:text-base mtablets:text-lg font-semibold cursor-pointer">See All</p>
+        <p className="text-paid-green fold:text-xs mobile:text-base mtablets:text-lg font-semibold cursor-pointer" onClick={seeAllContent} > {content ? 'Show Less' : 'See All'}</p>
       </div>
-      <div className="overflow-x-auto fold:text-xxs mobile:text-xxss mtablets:text-base">
+      <div className={`overflow-x-auto fold:text-xxs mobile:text-xxss mtablets:text-base mmtablets:h-96 ${content ? 'mmtablets:overflow-y-auto' : 'mmtablets:overflow-y-hidden'} custom-scrollbar`}>
         <div className="grid grid-cols-6 text-gray-text-3 fold:text-xxs mobile:text-xxss mtablets:text-base border-b dark:border-gray-700 py-3">
           <div>Name</div>
           <div></div>
@@ -112,8 +157,8 @@ const LastOrders = ({toggleModal,changeModalStateClose}) => {
               <p>View</p>
             </motion.div>
           </div>
-          
         ))}
+        
       </div>
     </section>
   );

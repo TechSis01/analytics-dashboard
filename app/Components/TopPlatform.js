@@ -1,22 +1,27 @@
+'use client'
 import barblue from "../../public/barblue.png";
 import barlightblue from "../../public/barlightblue.png";
 import bargold from "../../public/bargold.png";
-import bared from "../../public/bared.png";
 import Image from "next/image";
+import { useState } from "react";
 const TopPlatform = () => {
+    const [content,setContent] = useState(false)
+    const seeAllContent = ()=>{
+        setContent((prev)=>!prev)
+    }
   return (
-    <section className="flex flex-col mt-3 tablets:mt-0 fold:mx-3 mmtablets:mx-4 overflow-y-auto bg-white dark:bg-coolors-gray rounded-md fold:p-2 mtablets:p-5 ">
+    <section className="flex flex-col mt-3 tablets:mt-0 fold:mx-3 mmtablets:mx-4 bg-white dark:bg-coolors-gray rounded-md fold:p-2 mtablets:p-5 ">
       <div>
-        <div className="flex justify-between items-center w-11/12">
+        <div className="flex justify-between items-center w-11/12 mmtablets:py-5">
           <p className="fold:text-xs mobile:text-base mtablets:text-lg font-semibold">
             Top Platform
           </p>
-          <p className="text-paid-green fold:text-xs mobile:text-base mtablets:text-lg font-semibold cursor-pointer">
-            See All
+          <p onClick={seeAllContent} className="text-paid-green fold:text-xs mobile:text-base mtablets:text-lg font-semibold cursor-pointer">
+            {content ? 'Show Less' : 'See All'}
           </p>
         </div>
       </div>
-      <div className=" mmtablets:h-80 overflow-y-auto custom-scrollbar px-2">
+      <div className={`mmtablets:h-96  ${content ? 'mmtablets:overflow-y-auto' : 'mmtablets:overflow-y-hidden'} custom-scrollbar px-2`}>
         <div className="my-5">
           <h2 className="fold:text-xs mobile:text-base mtablets:text-lg font-semibold my-2">
             Book Bazaar

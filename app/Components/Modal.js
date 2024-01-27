@@ -48,6 +48,46 @@ const lastOrders = [
     image: philip,
     id: 5,
   },
+  {
+    name: "David Herbet",
+    date: "Nov 18,2023",
+    amount: "$50,000",
+    status: "Paid",
+    image: marcus,
+    id: 6,
+  },
+  {
+    name: "Queendoline Akpan",
+    date: "Nov 12, 2023",
+    amount: "$110,000",
+    status: "Refund",
+    image: jaydon,
+    id: 7,
+  },
+  {
+    name: "Chioma Audrey",
+    date: "Nov 16,2023",
+    amount: "$66,000",
+    status: "Paid",
+    image: corey,
+    id: 8,
+  },
+  {
+    name: "Franklin Lawrence",
+    date: "Nov 11,2023",
+    amount: "$109,000",
+    status: "Refund",
+    image: cooper,
+    id: 9,
+  },
+  {
+    name: "Sandra Lubin",
+    date: "Nov 19,2023",
+    amount: "$99,000",
+    status: "Paid",
+    image: philip,
+    id: 10,
+  },
 ];
 
 const variants = {
