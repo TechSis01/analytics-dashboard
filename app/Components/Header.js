@@ -8,11 +8,28 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useEffect,useState } from "react";
 const Header = () => {
   const { resolvedTheme } = useTheme();
+  const [localTheme, setLocalTheme] = useState('')
+  const [backgroundColor, setBackgroundColor] = useState('')
+  
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('theme');
+    setLocalTheme(storedTheme);
+  }, [resolvedTheme]);
+  
+  // Add a new useEffect that listens to changes in localTheme
+  useEffect(() => {
+    if (localTheme === 'light') {
+      setBackgroundColor("#e9ecef");
+    } else if (localTheme === 'dark') {
+      setBackgroundColor("#212529");
+    }
+  }, [localTheme]);
 
-  const logoSrc = resolvedTheme === "dark" ? solarbell : bell;
-  const calSrc = resolvedTheme === "dark" ? calendarbright : calendar;
+  const logoSrc = localTheme === "dark" ? solarbell : bell;
+  const calSrc = localTheme === "dark" ? calendarbright : calendar;
   return (
     <div className=" bg-gray-scale dark:bg-black grid-cols-1 grid mtablets:grid-cols-4 mmtablets:grid-cols-5 items-center pb-2  border-b border-gray-300 dark:border-gray-700 pl-2 pr-2 lg:pl-5 gap-5">
       <div className="col-span-1 mmtablets:col-span-2">
@@ -58,7 +75,6 @@ const Header = () => {
             </motion.div>
           </div>
         </div>
-
       </div>
     </div>
   );

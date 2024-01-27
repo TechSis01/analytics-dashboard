@@ -26,28 +26,29 @@ const variants = {
 const Sidebar = ({ isOpenState, toggle }) => {
   const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme('light');
-
-  const logoSrc = resolvedTheme === "dark" ? brightdash : dashboardIcon;
-  const moonSrc = resolvedTheme === "dark" ? brightmoon : moon;
-  const backgroundColorLightMode = "#e9ecef";
-  const backgroundColorDarkMode = "#212529"; 
-
-  useEffect(() => {
-    setMounted(true);
+  const [localTheme, setLocalTheme] = useState('')
   
+  
+ const [backgroundColor, setBackgroundColor] = useState('')
+  
+ useEffect(() => {
+    setMounted(true);
     const storedTheme = localStorage.getItem('theme');
-    if (storedTheme) {
-      setTheme(storedTheme);
-    } else {
-      setTheme(resolvedTheme);
-    }
+    setLocalTheme(storedTheme);
   }, [resolvedTheme]);
   
-  const currentTheme = mounted ? resolvedTheme : 'light';
+  // Add a new useEffect that listens to changes in localTheme
+  useEffect(() => {
+    if (localTheme === 'light') {
+      setBackgroundColor("#e9ecef")
+    } else if (localTheme === 'dark') {
+      setBackgroundColor("#212529")
+    }
+  }, [localTheme]);
+  
+  const logoSrc = localTheme === "dark" ? brightdash : dashboardIcon;
+  const moonSrc = localTheme === "dark" ? brightmoon : moon;
 
-  const backgroundColor = currentTheme === 'light' ? backgroundColorLightMode : backgroundColorDarkMode;
- 
-   // or 'dark' based on your default preference
   return (
     // MOBILE
     <>
@@ -122,7 +123,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
                   onClick={() => setTheme("light")}
                   size={25}
                   style={{
-                    color: currentTheme === "dark" ? "#B2ABAB" : "#FFFFFF",
+                    color: localTheme === "dark" ? "#B2ABAB" : "#FFFFFF",
                   }}
                   className="dark:bg-transparent bg-paid-green rounded-full p-1"
                 />
@@ -242,7 +243,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
                 onClick={() => setTheme("light")}
                 size={25}
                 style={{
-                  color: resolvedTheme === "dark" ? "#B2ABAB" : "#FFFFFF",
+                  color: localTheme === "dark" ? "#B2ABAB" : "#FFFFFF",
                 }}
                 className="dark:bg-transparent bg-paid-green rounded-full p-1"
               />
@@ -286,7 +287,7 @@ const Sidebar = ({ isOpenState, toggle }) => {
           >
             <Image src={backIcon} alt="logo" width={80} height={20}></Image>
           </motion.div>
-          <div className="bg-white h-20 w-full dark:bg-coolors-gray"></div>
+          <div className="bg-white h-full w-full dark:bg-coolors-gray"></div>
         </div>
       </div>
     </>

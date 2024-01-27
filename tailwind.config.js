@@ -30,7 +30,8 @@ module.exports = {
         'paid-green':'#34CAA5',
         'paid-red':'#ED544E',
         'coolors-gray':'#202020',
-        'icon-gray':'#B2ABAB'
+        'icon-gray':'#B2ABAB',
+        'darkmodegray':'#0b090a'
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

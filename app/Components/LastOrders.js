@@ -1,3 +1,4 @@
+'use client'
 import jaydon from "../../public/Jaydon.png";
 import marcus from "../../public/Marcus.png";
 import corey from "../../public/corey.png";
@@ -8,7 +9,7 @@ import viewIcon from "../../public/viewIcon.png";
 import { motion } from "framer-motion";
 import viewIconBright from '../../public/viewIconBright.png'
 import { useTheme } from "next-themes";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 const lastOrders = [
   {
     name: "Marcus Bergson",
@@ -92,16 +93,33 @@ const lastOrders = [
   },
 ];
 const LastOrders = ({toggleModal,changeModalStateClose}) => {
+  const { resolvedTheme } = useTheme();
   const [content,setContent] = useState(false)
+  const [localTheme, setLocalTheme] = useState('')
+  const [backgroundColor, setBackgroundColor] = useState('')
+  
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('theme');
+    setLocalTheme(storedTheme);
+  }, [resolvedTheme]);
+  
+  // Add a new useEffect that listens to changes in localTheme
+  useEffect(() => {
+    if (localTheme === 'light') {
+      setBackgroundColor("#e9ecef");
+    } else if (localTheme === 'dark') {
+      setBackgroundColor("#212529");
+    }
+  }, [localTheme]);
   const seeAllContent = ()=>{
       setContent((prev)=>!prev)
   }
-  const { resolvedTheme } = useTheme();
+  
   const modalFunc = (id)=>{
     toggleModal(id)
     changeModalStateClose()
   }
-  const logoSrc = resolvedTheme === "dark" ? viewIconBright : viewIcon;
+  const logoSrc = localTheme === "dark" ? viewIconBright : viewIcon;
   
   return (
     <section className="col-span-2 mx-3 bg-white rounded-md dark:bg-coolors-gray fold:p-1 mobile:p-2 mtablets:p-5 ">
@@ -122,7 +140,7 @@ const LastOrders = ({toggleModal,changeModalStateClose}) => {
           
           <div
             key={lastOrder.id}
-            className={`grid grid-cols-6 py-3 items-center border-b dark:border-gray-700`}
+            className={`grid grid-cols-6 py-3 items-center border-b dark:border-gray-700 ${localTheme === 'dark' ? 'hover:bg-darkmodegray' : 'hover:bg-gray-scale'}`}
           >
             <div className="flex items-center gap-3 col-span-2">
               <Image
