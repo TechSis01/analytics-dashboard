@@ -25,7 +25,7 @@ const variants = {
 
 const Sidebar = ({ isOpenState, toggle }) => {
   const [mounted, setMounted] = useState(false);
-  const { setTheme, resolvedTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme('light');
 
   const logoSrc = resolvedTheme === "dark" ? brightdash : dashboardIcon;
   const moonSrc = resolvedTheme === "dark" ? brightmoon : moon;
