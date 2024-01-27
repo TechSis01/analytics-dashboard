@@ -109,7 +109,7 @@ const LastOrders = ({toggleModal,changeModalStateClose}) => {
         <p className="fold:text-xs mobile:text-base mtablets:text-lg font-semibold">Last Orders</p>
         <p className="text-paid-green fold:text-xs mobile:text-base mtablets:text-lg font-semibold cursor-pointer" onClick={seeAllContent} > {content ? 'Show Less' : 'See All'}</p>
       </div>
-      <div className={`overflow-x-auto fold:text-xxs mobile:text-xxss mtablets:text-base mmtablets:h-96 ${content ? 'mmtablets:overflow-y-auto' : 'mmtablets:overflow-y-hidden'} custom-scrollbar`}>
+      <div className={`overflow-x-auto fold:text-xxs mobile:text-xxss mtablets:text-base h-96 ${content ? 'overflow-y-auto' : 'overflow-y-hidden'} custom-scrollbar`}>
         <div className="grid grid-cols-6 text-gray-text-3 fold:text-xxs mobile:text-xxss mtablets:text-base border-b dark:border-gray-700 py-3">
           <div>Name</div>
           <div></div>

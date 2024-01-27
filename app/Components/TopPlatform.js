@@ -21,7 +21,7 @@ const TopPlatform = () => {
           </p>
         </div>
       </div>
-      <div className={`mmtablets:h-96  ${content ? 'mmtablets:overflow-y-auto' : 'mmtablets:overflow-y-hidden'} custom-scrollbar px-2`}>
+      <div className={`h-96  ${content ? 'overflow-y-auto' : 'overflow-y-hidden'} custom-scrollbar px-2`}>
         <div className="my-5">
           <h2 className="fold:text-xs mobile:text-base mtablets:text-lg font-semibold my-2">
             Book Bazaar

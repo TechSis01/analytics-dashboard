@@ -7,6 +7,8 @@ import corey from "../../public/corey.png";
 import cooper from "../../public/cooper.png";
 import philip from "../../public/philip.png";
 import money from "../../public/money.png";
+import useDownloader from "react-use-downloader";
+import file from '../../public/geegpay.pdf'
 const lastOrders = [
   {
     name: "Marcus Bergson",
@@ -114,7 +116,8 @@ const variants = {
 
 const Modal = ({ dataId, changeModalState, currentModalState }) => {
   const [currentState, setCurrentState] = useState({});
-
+  
+ 
   useEffect(() => {
     let filteredData = lastOrders.filter((data) => data.id === dataId);
     setCurrentState(filteredData[0]);
