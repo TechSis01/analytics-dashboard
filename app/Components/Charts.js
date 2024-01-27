@@ -173,7 +173,7 @@ const Charts = ({ openStateTimeline, timeLineOpen }) => {
   return (
     <div className="bg-white dark:bg-coolors-gray p-5 m-3 rounded-md col-span-2  text-xs ">
       <div className="flex justify-between">
-        <p className="font-semibold">Sales Trends</p>
+        <p className="fold:text-xs mobile:text-base mtablets:text-lg pb-2 font-semibold">Sales Trends</p>
         <div className="flex items-center gap-3">
           <p>Sort by:</p>
           <motion.div

@@ -74,6 +74,7 @@ const Header = () => {
               <Image src={logoSrc} alt="bell"  width={20} height={20} ></Image>
             </motion.div>
           </div>
+          
         </div>
       </div>
     </div>
