@@ -68,7 +68,7 @@ const TopPlatform = () => {
             XStore
           </h2>
           <div className="w-full h-3 bg-gray-scale rounded-md">
-            <div className="bg-red-600 rounded-md w-3/12 h-3"></div>
+            <div className="bg-red-600 rounded-md w-3/12 h-4"></div>
           </div>
           <div className="flex justify-between items-center">
             <p className="mt-2 fold:text-xs mobile:text-base mtablets:text-lg">
@@ -82,7 +82,7 @@ const TopPlatform = () => {
             Drone
           </h2>
           <div className="w-full h-3 bg-gray-scale rounded-md">
-            <div className="bg-indigo-900 rounded-md w-1/5 h-3"></div>
+            <div className="bg-indigo-900 rounded-md w-1/5 h-4"></div>
           </div>
           <div className="flex justify-between items-center">
             <p className="mt-2 fold:text-xs mobile:text-base mtablets:text-lg">
@@ -96,7 +96,7 @@ const TopPlatform = () => {
             Mine Craft
           </h2>
           <div className="w-full h-3 bg-gray-scale rounded-md">
-            <div className="bg-purple-500 rounded-md w-1/6 h-3"></div>
+            <div className="bg-purple-500 rounded-md w-1/6 h-4"></div>
           </div>
           <div className="flex justify-between items-center">
             <p className="mt-2 fold:text-xs mobile:text-base mtablets:text-lg">
@@ -110,7 +110,7 @@ const TopPlatform = () => {
             City Hunter
           </h2>
           <div className="w-full h-3 bg-gray-scale rounded-md">
-            <div className="bg-green-500 rounded-md w-1/12 h-3"></div>
+            <div className="bg-green-500 rounded-md w-1/12 h-4"></div>
           </div>
           <div className="flex justify-between items-center ">
             <p className="mt-2 fold:text-xs mobile:text-base mtablets:text-lg">
