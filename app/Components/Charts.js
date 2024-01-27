@@ -49,7 +49,7 @@ export const optionsDesktop = {
 };
  
 export const optionsMobile = {
-  // maintainAspectRatio: true,
+  maintainAspectRatio: true,
   aspectRatio: 0,
   tooltips: {
     callbacks: {
