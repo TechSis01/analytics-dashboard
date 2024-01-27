@@ -237,10 +237,10 @@ const Charts = ({ openStateTimeline, timeLineOpen }) => {
         </div>
       </motion.div>
 
-      <div className="hidden mmtablets:block">
+      <div className="hidden tablets:block">
         <Bar options={optionsDesktop} data={data} />
       </div>
-      <div className="block mmtablets:hidden overflow-x-auto text-xxss">
+      <div className="block tablets:hidden overflow-x-auto text-xxss">
         <Bar options={optionsMobile} data={data} />
       </div>
     </div>
