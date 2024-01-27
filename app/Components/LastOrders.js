@@ -122,7 +122,7 @@ const LastOrders = ({toggleModal,changeModalStateClose}) => {
           
           <div
             key={lastOrder.id}
-            className={`grid grid-cols-6 py-3 items-center border-b dark:border-gray-700 ${resolvedTheme === 'dark' ? 'hover-color-dark' : 'hover-color-light'}`}
+            className={`grid grid-cols-6 py-3 items-center border-b dark:border-gray-700`}
           >
             <div className="flex items-center gap-3 col-span-2">
               <Image

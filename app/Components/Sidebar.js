@@ -32,8 +32,17 @@ const Sidebar = ({ isOpenState, toggle }) => {
   const backgroundColorLightMode = "#e9ecef";
   const backgroundColorDarkMode = "#212529"; 
 
-  useEffect(() => setMounted(true), []);
-
+  useEffect(() => {
+    setMounted(true);
+  
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+      setTheme(storedTheme);
+    } else {
+      setTheme(resolvedTheme);
+    }
+  }, [resolvedTheme]);
+  
   const currentTheme = mounted ? resolvedTheme : 'light';
 
   const backgroundColor = currentTheme === 'light' ? backgroundColorLightMode : backgroundColorDarkMode;
