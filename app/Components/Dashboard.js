@@ -37,7 +37,7 @@ const Dashboard = ({
   }, [localTheme]);
   return (
     <div
-      className={`relative w-full ml-0 mtablets:ml-16 border-l dark:border-gray-700 border-gray-300 `}
+      className={` w-full ml-0 mtablets:ml-16 border-l dark:border-gray-700 border-gray-300 `}
     >
       <div
         className={`mtablets:hidden fixed w-full dark:bg-coolors-gray bg-white flex justify-between px-2 py-2 items-center`}
